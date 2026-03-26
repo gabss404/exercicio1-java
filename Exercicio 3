@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Exercicio3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um nome: ");
+        String nome = scanner.nextLine();
+
+        char[] vetor = nome.toCharArray();
+
+        // Inverter
+        for (int i = 0; i < vetor.length / 2; i++) {
+            char temp = vetor[i];
+            vetor[i] = vetor[vetor.length - 1 - i];
+            vetor[vetor.length - 1 - i] = temp;
+        }
+
+        System.out.print("Nome invertido: ");
+        for (char c : vetor) {
+            System.out.print(c);
+        }
+
+        scanner.close();
+    }
+}
